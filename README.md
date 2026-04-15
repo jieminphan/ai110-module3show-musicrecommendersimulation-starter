@@ -132,13 +132,11 @@ Example:
 
 ## 3. How It Works (Short Explanation)
 
-Describe your scoring logic in plain language.
+In real-world recommendations, a combination of techniques are used. Some examples are Collaborative Filtering, Content-Based Filtering, Natural Language Processing and Deep Learning. In Collaborative Filtering, the system finds users with similar tastes profiles and recommend what they enjoy. It also finds songs similar to the one users liked, based on shared listeners. In Content-Based Filtering, songs are analyzed, using features such as tempo, key genre, artistes and listen time. In this recommendation system, Content-Based Filertering will be prioritized.
 
-- What features of each song does it consider
-- What information about the user does it use
-- How does it turn those into a number
+The model looks at five things about each song: its genre (like pop, lofi, or jazz), its mood (like happy, chill, or intense), its energy level (a number from 0 to 1 representing how calm or intense it feels), its acousticness (how organic and acoustic vs. electronic it sounds), and its tempo (how fast or slow the beat is). The model asks the user four things: their favorite genre, their preferred mood, their ideal energy level, and whether they prefer acoustic or electronic sounds. These four inputs become the lens through which every song in the catalog is evaluated. Each song gets points based on how well it matches the user's preferences. Genre and mood are the most important — if a song matches both, it gets a big boost. Energy is scored by distance: songs closer to the user's target energy score higher, and songs far away score much lower. Acousticness works as a supporting check — if the user likes acoustic music and the song sounds acoustic, it earns extra points. All the points are added together into a final score, and the top-scoring songs become the recommendations. Each contributing factor also produces a plain-language reason, like "Matches your preferred mood" or "Energy level is a close match."
 
-Try to avoid code in this section, treat it like an explanation to a non programmer.
+This model might be biased to genre; scores given by genre are higher than those given by mood.
 
 ---
 

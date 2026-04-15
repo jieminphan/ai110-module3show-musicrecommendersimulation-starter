@@ -2,46 +2,28 @@
 
 ## 1. Model Name  
 
-Give your model a short, descriptive name.  
-Example: **VibeFinder 1.0**  
+SparklingRecommender v1.0  
 
 ---
 
 ## 2. Intended Use  
 
-Describe what your recommender is designed to do and who it is for. 
-
-Prompts:  
-
-- What kind of recommendations does it generate  
-- What assumptions does it make about the user  
-- Is this for real users or classroom exploration  
+This recommender generates music based on what the user listens to. It assumes the genre/s that the user likes to listen to, based on the frequency of listening of songs from a particular genre. This is for classroom exploration however if this recommender can be improved and worked on in the future, it could possibily be for real users.
 
 ---
 
 ## 3. How the Model Works  
 
-Explain your scoring approach in simple language.  
-
-Prompts:  
-
-- What features of each song are used (genre, energy, mood, etc.)  
-- What user preferences are considered  
-- How does the model turn those into a score  
-- What changes did you make from the starter logic  
-
-Avoid code here. Pretend you are explaining the idea to a friend who does not program.
+The model looks at five things about each song: its genre (like pop, lofi, or jazz), its mood (like happy, chill, or intense), its energy level (a number from 0 to 1 representing how calm or intense it feels), its acousticness (how organic and acoustic vs. electronic it sounds), and its tempo (how fast or slow the beat is). The model asks the user four things: their favorite genre, their preferred mood, their ideal energy level, and whether they prefer acoustic or electronic sounds. These four inputs become the lens through which every song in the catalog is evaluated. Each song gets points based on how well it matches the user's preferences. Genre and mood are the most important — if a song matches both, it gets a big boost. Energy is scored by distance: songs closer to the user's target energy score higher, and songs far away score much lower. Acousticness works as a supporting check — if the user likes acoustic music and the song sounds acoustic, it earns extra points. All the points are added together into a final score, and the top-scoring songs become the recommendations. Each contributing factor also produces a plain-language reason, like "Matches your preferred mood" or "Energy level is a close match."
 
 ---
 
 ## 4. Data  
 
-Describe the dataset the model uses.  
+This model uses a dataset of 10 songs. The genres included are pop, lofi, rock, ambient, jazz, synthwave, indie pop, hip-hop, classical, r&b, country, edm, folk, metal, reggae. I added about 8 more songs.
 
 Prompts:  
-
-- How many songs are in the catalog  
-- What genres or moods are represented  
+ 
 - Did you add or remove data  
 - Are there parts of musical taste missing in the dataset  
 
