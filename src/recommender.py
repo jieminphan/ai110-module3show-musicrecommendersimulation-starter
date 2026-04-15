@@ -69,24 +69,26 @@ def load_songs(csv_path: str) -> List[Dict]:
 
 def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
     """Score a song against user preferences and return a (total_score, reasons) tuple."""
+    # Max possible score (experimental weights):
+    #   genre(1.5) + mood(2.5) + energy(4.0) + acousticness(1.5) = 9.5
     score = 0.0
     reasons = []
 
-    # Genre match — highest weight (+3.0)
+    # Genre match — weight (+1.5)
     if song["genre"] == user_prefs["genre"]:
-        score += 3.0
-        reasons.append(f"Genre match: {song['genre']} (+3.0)")
+        score += 1.5
+        reasons.append(f"Genre match: {song['genre']} (+1.5)")
 
     # Mood match — second highest weight (+2.5)
     if song["mood"] == user_prefs["mood"]:
         score += 2.5
         reasons.append(f"Mood match: {song['mood']} (+2.5)")
 
-    # Energy — Gaussian distance, max +2.0
-    # Formula: 2.0 * exp(-(diff²) / (2 * 0.25²))
+    # Energy — Gaussian distance, max +4.0
+    # Formula: 4.0 * exp(-(diff²) / (2 * 0.25²))
     # Rewards songs close to the user's target; drops sharply as distance grows
     energy_diff = abs(user_prefs["target_energy"] - song["energy"])
-    energy_score = 2.0 * math.exp(-(energy_diff ** 2) / (2 * 0.25 ** 2))
+    energy_score = 4.0 * math.exp(-(energy_diff ** 2) / (2 * 0.25 ** 2))
     score += energy_score
     reasons.append(
         f"Energy: target {user_prefs['target_energy']} vs song {song['energy']} "
