@@ -104,6 +104,9 @@ Write 1 to 2 paragraphs here about what you learned:
 
 ---
 
+<img width="1272" height="861" alt="Screenshot 2026-04-14 at 11 11 36 PM" src="https://github.com/user-attachments/assets/5bea402f-16a1-4f07-a88e-73555c719ecf" />
+
+
 ## 7. `model_card_template.md`
 
 Combines reflection and model card framing from the Module 3 guidance. :contentReference[oaicite:2]{index=2}  
@@ -190,7 +193,4 @@ The most surprising thing was how confidently the system gave wrong answers. Whe
 Building this changed how I think about real music apps. Spotify or Apple Music aren't just running a scoring function — they're working around exactly these kinds of edge cases at massive scale, which is a much harder problem than it looks from the outside.
 
 Human judgment still matters most when preferences conflict with each other, like wanting acoustic and high-energy at the same time. The model just picks a winner silently. A real system should probably surface that tension to the user instead of hiding it in the math.
-
-## 10. Screenshots
-<img width="1272" height="861" alt="Screenshot 2026-04-14 at 11 11 36 PM" src="https://github.com/user-attachments/assets/84d97613-f6a2-4af2-97ca-ae04fab20a18" />
 
