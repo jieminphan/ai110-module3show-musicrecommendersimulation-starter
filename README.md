@@ -191,3 +191,6 @@ Building this changed how I think about real music apps. Spotify or Apple Music 
 
 Human judgment still matters most when preferences conflict with each other, like wanting acoustic and high-energy at the same time. The model just picks a winner silently. A real system should probably surface that tension to the user instead of hiding it in the math.
 
+## 10. Screenshots
+<img width="1272" height="861" alt="Screenshot 2026-04-14 at 11 11 36 PM" src="https://github.com/user-attachments/assets/84d97613-f6a2-4af2-97ca-ae04fab20a18" />
+
