@@ -2,32 +2,15 @@
 
 ## Project Summary
 
-In this project you will build and explain a small music recommender system.
-
-Your goal is to:
-
-- Represent songs and a user "taste profile" as data
-- Design a scoring rule that turns that data into recommendations
-- Evaluate what your system gets right and wrong
-- Reflect on how this mirrors real world AI recommenders
-
-Replace this paragraph with your own summary of what your version does.
+This recommender generates music based on what the user listens to. It assumes the genre/s that the user likes to listen to, based on the frequency of listening of songs from a particular genre. This is for classroom exploration however if this recommender can be improved and worked on in the future, it could possibily be for real users.
 
 ---
 
 ## How The System Works
 
-Explain your design in plain language.
+In real-world recommendations, a combination of techniques are used. Some examples are Collaborative Filtering, Content-Based Filtering, Natural Language Processing and Deep Learning. In Collaborative Filtering, the system finds users with similar tastes profiles and recommend what they enjoy. It also finds songs similar to the one users liked, based on shared listeners. In Content-Based Filtering, songs are analyzed, using features such as tempo, key genre, artistes and listen time. In this recommendation system, Content-Based Filertering will be prioritized.
 
-Some prompts to answer:
-
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
-
-You can include a simple diagram or bullet list if helpful.
+The model looks at five things about each song: its genre (like pop, lofi, or jazz), its mood (like happy, chill, or intense), its energy level (a number from 0 to 1 representing how calm or intense it feels), its acousticness (how organic and acoustic vs. electronic it sounds), and its tempo (how fast or slow the beat is). The model asks the user four things: their favorite genre, their preferred mood, their ideal energy level, and whether they prefer acoustic or electronic sounds. These four inputs become the lens through which every song in the catalog is evaluated. Each song gets points based on how well it matches the user's preferences. Genre and mood are the most important — if a song matches both, it gets a big boost. Energy is scored by distance: songs closer to the user's target energy score higher, and songs far away score much lower. Acousticness works as a supporting check — if the user likes acoustic music and the song sounds acoustic, it earns extra points. All the points are added together into a final score, and the top-scoring songs become the recommendations. Each contributing factor also produces a plain-language reason, like "Matches your preferred mood" or "Energy level is a close match."
 
 ---
 
