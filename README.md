@@ -103,8 +103,21 @@ Write 1 to 2 paragraphs here about what you learned:
 
 
 ---
-
+## Relevant Screenshots
+Phase 3 step 4
 <img width="1272" height="861" alt="Screenshot 2026-04-14 at 11 11 36 PM" src="https://github.com/user-attachments/assets/5bea402f-16a1-4f07-a88e-73555c719ecf" />
+
+Phase 4 step 1
+<img width="657" height="492" alt="Screenshot 2026-04-14 at 11 25 50 PM" src="https://github.com/user-attachments/assets/670d7fd8-1b82-47e0-b5ce-a9c9221becd4" />
+
+<img width="659" height="491" alt="Screenshot 2026-04-14 at 11 25 59 PM" src="https://github.com/user-attachments/assets/689da798-8067-4b8e-84cd-20b9cd9809d5" />
+
+<img width="690" height="487" alt="Screenshot 2026-04-14 at 11 26 06 PM" src="https://github.com/user-attachments/assets/aa59caf1-52d1-4803-acef-ef7cd13b2621" />
+
+<img width="653" height="509" alt="Screenshot 2026-04-14 at 11 26 11 PM" src="https://github.com/user-attachments/assets/5c3b90d9-66d6-40dc-a4d4-37123e3bab7a" />
+
+<img width="676" height="492" alt="Screenshot 2026-04-14 at 11 26 25 PM" src="https://github.com/user-attachments/assets/faee5522-7c9a-4176-a180-ef7c6b3780ad" />
+
 
 
 ## 7. `model_card_template.md`
